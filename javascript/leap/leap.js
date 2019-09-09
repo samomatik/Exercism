@@ -1,0 +1,20 @@
+//
+// This is only a SKELETON file for the 'Leap' exercise. It's been provided as a
+// convenience to get you started writing code faster.
+//
+
+export const isLeap = (year) => {
+  // Interesting single line solution
+  // return year % 100 === 0 ? year % 400 : year % 4;
+  let leap = false;
+  if (year % 4 == 0) {
+    leap = true;
+    if (year % 100 == 0) {
+      leap = false;
+      if (year % 400 == 0) {
+        leap = true;
+      }
+    }
+  }
+  return leap;
+};
